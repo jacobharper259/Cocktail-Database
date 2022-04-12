@@ -1,0 +1,214 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+html{
+  overflow-x: clip;
+  background: black;
+}
+body{
+  width:100vw;
+  height:110vh;
+  
+  z-index: 10000;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+:root{
+  --height:40vh;
+}
+button{
+  margin: 10px;
+}
+img{
+  display: block;
+  margin: 0 auto;
+  width:100%;
+  position:relative;
+  z-index: -1000;
+}
+h1{
+  color:white;
+}
+h2{
+  
+  position:absolute;
+  z-index: 100;
+}
+section{
+  width:100%;
+  display:flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+.carousel{
+  position: relative;
+  right:50vw;
+  display:flex;
+  text-align: center;
+  flex-direction: row;
+  width: 200vw;
+  align-items: flex-start;
+}
+.carousel.animate{
+  animation-duration: .5s;
+  animation-name: slide;
+}
+@keyframes slide {
+  from{
+    right:50vw;
+  }
+  to{
+    right:90vw;
+  }
+}
+.carousel.animateBack{
+  animation-duration: .5s;
+  animation-name: slideBack;
+}
+@keyframes slideBack {
+  from{
+    right:50vw;
+  }
+  to{
+    right:10vw;
+  }
+}
+
+
+.carousel div section{
+  width:70%;
+  
+  color:white;
+  border:2px solid black;
+  height:var(--height)
+}
+.carousel div section ul{
+  list-style: none;
+  padding:0
+}
+.info.collapse{
+  overflow: clip;
+  animation-duration: 0.3s;
+  animation-name: collapse;
+}
+.info.whileAnimate{
+  height:0vh;
+  opacity: 0;
+}
+@keyframes collapse {
+  from{
+    height:var(--height);
+  }
+  to{
+    height:0vh;
+  }
+  
+}
+.info h3{
+  margin:0;
+}
+
+.info.uncollapse{
+  overflow: clip;
+  animation-duration: 0.3s;
+  animation-name: uncollapse;
+}
+@keyframes uncollapse {
+  from{
+    height:0vh;
+    
+  }
+  to{
+    height:var(--height);
+    
+  }
+  
+}
+div{
+  
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width:40%;
+}
+
+
+div div{
+  display:flex;
+  justify-content: center;
+  width:70%;
+  margin: 0 15%;
+  word-wrap: break-word;
+}
+div div h2{
+  width:14%;
+  color:white;
+  font-size: 60px;
+  font-family: 'Rubik', sans-serif;
+  text-shadow: -1px 1px 0 #000,
+				        1px 1px 0 #000,
+				        1px -1px 0 #000;
+				  
+}
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  float:left;
+  display: block; /* Hidden by default */
+  width: 25%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #000 0%, #000000d6 50%, #00000087 75%, #3330 100%);
+  z-index: 101; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+#overlayR {
+  position: fixed; /* Sit on top of the page content */
+  float:right;
+  margin-left: 75%;
+  display: block; /* Hidden by default */
+  width: 25%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to left, #000 0%, #000000d6 50%, #00000087 75%, #3330 100%);
+  z-index: 101; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+button{
+  height:3em;
+  width:9em;
+  border-color: transparent;
+}
+.buttons{
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  z-index: 1000;
+}
+.buttons button{
+  width:4em;
+  height:4em;
+  border-radius: 50%;
+  border-color: transparent;
+}
+
+.hidden{
+  display:none;
+  
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

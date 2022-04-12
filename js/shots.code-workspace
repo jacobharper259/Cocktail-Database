@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Starwars Weather"
+		},
+		{
+			"path": "../../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Coding Projects"
+	}
+}
