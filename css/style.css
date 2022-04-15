@@ -162,7 +162,7 @@ div div h2{
   position: fixed; /* Sit on top of the page content */
   float:left;
   display: block; /* Hidden by default */
-  width: 25%; /* Full width (cover the whole page) */
+  width: 25vw; /* Full width (cover the whole page) */
   height: 100%; /* Full height (cover the whole page) */
   top: 0;
   left: 0;
@@ -173,19 +173,19 @@ div div h2{
   cursor: pointer; /* Add a pointer on hover */
 }
 #overlayR {
-  position: fixed; /* Sit on top of the page content */
-  float:right;
-  margin-left: 75%;
-  display: block; /* Hidden by default */
-  width: 25%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
+  position: fixed;
+  float: right;
+  margin-left: 75vw;
+  display: block;
+  width: 25vw;
+  height: 100%;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: linear-gradient(to left, #000 0%, #000000d6 50%, #00000087 75%, #3330 100%);
-  z-index: 101; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+  z-index: 101;
+  cursor: pointer;
 }
 button{
   height:3em;
@@ -209,6 +209,44 @@ button{
   display:none;
   
 }
+.get{
+  border-radius: 1em;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+@media screen and (max-width: 1233px){
+  div div h2{
+  font-size: 50px;
+  }
+}
+@media screen and (max-width: 1060px){
+  div div h2{
+  font-size: 45px;
+  }
+}
+@media screen and (max-width: 862px){
+  div div h2{
+  font-size: 35px;
+  }
+}
+@media screen and (max-width: 700px){
+  div div h2{
+  font-size: 30px;
+  }
+}
+@media screen and (max-width: 616px){
+  div div h2{
+  font-size: 25px;
+  }
+}
+@media screen and (max-width: 529px){
+  div div h2{
+  font-size: 22px;
+  }
+}
+@media screen and (max-width: 452px){
+  div div h2{
+  font-size: 20px;
+  }
+}
