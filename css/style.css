@@ -211,6 +211,10 @@ button{
 }
 .get{
   border-radius: 1em;
+  color:black;
+}
+button{
+  color:black;
 }
 /******************************************
 /* ADDITIONAL STYLES
